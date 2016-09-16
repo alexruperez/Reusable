@@ -19,6 +19,7 @@
 		B4E3BE1BEE2B097474D2653263844F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		BA6D0DDF843DAC76D9DC2D4CC4F7BF69 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8FF5B46B6598347020A1855CF8EE8 /* UITableView+Reusable.swift */; };
 		D26DA70389E787DBB831A9AFB3CE5EB1 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CAE2E43524EE7A581DEA4AE3ECA33 /* StoryboardBased.swift */; };
+		D58D04121D8C3904002E5AEC /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58D04111D8C3904002E5AEC /* UITableViewCell+Reusable.swift */; };
 		D877A542E0FB788013277CE58EB6549C /* Pods-ReusableDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5B1B022E00CAF636DD01C0028E4AA /* Pods-ReusableDemo-dummy.m */; };
 		EFD4FDFEB089D6E367F800F53CA67E8F /* Reusable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11799986E721514952035B4F0228F8 /* Reusable-dummy.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		BD69F8323664714636FF64A821C7CACB /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		BF5DF83AE30365FCC369E0F44824C2DE /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
 		C5E95653CC5FFE4FD57242D1442F4B0E /* Reusable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reusable-umbrella.h"; sourceTree = "<group>"; };
+		D58D04111D8C3904002E5AEC /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
 		D5BC3BE4057BBCE83F86ED2D192E7ED0 /* Pods-ReusableDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReusableDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EE1649C95F44331AED6D266D8BDA1DA1 /* Reusable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Reusable.modulemap; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				BD69F8323664714636FF64A821C7CACB /* Reusable.swift */,
 				834A5AD5DF10158556CF51D25A0C1D6F /* UICollectionView+Reusable.swift */,
 				A3B8FF5B46B6598347020A1855CF8EE8 /* UITableView+Reusable.swift */,
+				D58D04111D8C3904002E5AEC /* UITableViewCell+Reusable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,7 +301,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				TargetAttributes = {
 					2385D9D1E682781092E216375B7CE8EA = {
 						LastSwiftMigration = 0800;
@@ -333,6 +336,7 @@
 				EFD4FDFEB089D6E367F800F53CA67E8F /* Reusable-dummy.m in Sources */,
 				57E4B56255C554EE3E8FADAECA09F8F9 /* Reusable.swift in Sources */,
 				D26DA70389E787DBB831A9AFB3CE5EB1 /* StoryboardBased.swift in Sources */,
+				D58D04121D8C3904002E5AEC /* UITableViewCell+Reusable.swift in Sources */,
 				A472DDB826D9A9ADF767AA6676B4B88B /* StoryboardSceneBased.swift in Sources */,
 				4F1075E33654373AD50F81276E383692 /* UICollectionView+Reusable.swift in Sources */,
 				BA6D0DDF843DAC76D9DC2D4CC4F7BF69 /* UITableView+Reusable.swift in Sources */,
@@ -363,7 +367,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E37F740CA8BE0C4A275075749D6E978 /* Pods-ReusableDemo.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -397,7 +402,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF575ABC5A0AE0578CF97EF1D24579F2 /* Pods-ReusableDemo.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -440,14 +446,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -472,7 +482,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 085DA761630C66CC2760A8381968F02E /* Reusable.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -502,7 +512,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 085DA761630C66CC2760A8381968F02E /* Reusable.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -543,13 +553,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -562,6 +576,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
